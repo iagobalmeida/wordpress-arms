@@ -13,4 +13,5 @@
               host: ${{ secrets.HOST }} 
               user: ${{ secrets.USER }}
               password: ${{ secrets.PASS }}
-              localDir: "."
+              localDir: "wordpress"
+              targetDir: "public_html/wordpress"
