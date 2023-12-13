@@ -1,0 +1,114 @@
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
+@import "./home.scss";
+@import "./cases.scss";
+@import "./criamos.scss";
+@import "./anim-slide.scss";
+@import "./work.scss";
+
+:root {
+  --ARMS---black: #201f1f;
+  --ARMS---white: #ffffff;
+  --ARMS---gray: #e0e0e0;
+  --ARMS---yellow: #f9c406;
+  --ARMS---blue: #6506f9;
+  --ARMS---blue-dark: #4604ae;
+  --swiper-pagination-bullet-height: 4px;
+  --swiper-pagination-bullet-horizontal-gap: 0px;
+  --swiper-pagination-bullet-vertical-gap: -4px;
+  --swiper-pagination-bullet-inactive-color: transparent;
+  --swiper-pagination-color: transparent;
+  --swiper-pagination-text-color: black;
+  --swiper-pagination-right: 310px;
+  --swiper-pagination-top: 83.8%;
+
+  --breakpoint-sm: 604px;
+  --breakpoint-lg: 1404px;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --swiper-pagination-right: 0px;
+  }
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  background: #201f1f;
+  filter: brightness(0);
+  animation: fadeIn 1s ease-in-out forwards;
+  font-family: "Gilroy", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    filter: brightness(0);
+  }
+
+  100% {
+    filter: brightness(1);
+  }
+}
+
+
+header {
+  svg {
+    color: var(--ARMS---white);
+    transition: color ease-in-out 150ms;
+  }
+
+  &.dark svg {
+    color: var(--ARMS---black);
+  }
+
+  &.light {
+    --swiper-pagination-text-color: white;
+  }
+}
+
+  
+.button {
+  @apply transition-all;
+  div {
+    @apply px-12 py-11 flex flex-row items-center gap-6 text-xl cursor-pointer;
+    @apply transition-all;
+  }
+  &:active {
+    @apply brightness-75;
+  }
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-arms-white;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  max-width: 100%;
+  max-height: -webkit-fill-available;
+  min-height: 0;
+  min-width: 0;
+}
+
+a {
+  text-decoration: none !important;
+}

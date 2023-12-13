@@ -1,0 +1,59 @@
+.criamos {
+    .h-max {
+      height: max-content;
+    }
+    h5 {
+      font-size: 150px;
+    }
+    .saturate-0 {
+      filter: saturate(0);
+    }
+    .transition-all {
+      transition: all 150ms ease-in-out;
+    }
+    [data-tab-toggle] {
+      position: relative;
+      span, svg {
+        z-index: 2;
+      }
+      &.inactive {
+        animation: tabInactive 1s ease-in-out forwards;
+      }
+    }
+    .tab-indicator {
+      transition: all 250ms ease-in-out;
+      &.on-0 {
+        left: 0%;
+      }
+      &.on-1 {
+        left: 25%;
+      }
+      &.on-2 {
+        left: 50%;
+      }
+      &.on-3 {
+        left: 75%;
+      }
+    }
+    
+    --swiper-pagination-color: var(--ARMS---blue);
+    --swiper-pagination-left: auto;
+    --swiper-pagination-right: 8px;
+    --swiper-pagination-bottom: 8px;
+    --swiper-pagination-top: auto;
+    --swiper-pagination-fraction-color: inherit;
+    --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.25);
+    --swiper-pagination-progressbar-size: 4px;
+    --swiper-pagination-bullet-size: 16px;
+    --swiper-pagination-bullet-width: 16px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+
+    .swiper-pagination-bullet {
+      border-radius: 8px;
+    }
+}
