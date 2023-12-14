@@ -14,4 +14,4 @@
               user: ${{ secrets.USER }}
               password: ${{ secrets.PASS }}
               localDir: "wordpress"
-              remoteDir: "public_html/wordpress"
+              remoteDir: "public_html"
